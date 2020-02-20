@@ -1,0 +1,36 @@
+h1{
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+;
+}
+
+.spectrum{
+    margin: auto;
+
+}
+
+td{
+    height: 200px;
+    padding: 100px;
+    border: white 20px solid;
+}
+#one{
+    background-color: darkolivegreen;
+}
+
+#two{
+    background-color: #011627;
+}
+
+#three{
+    background-color: #F3FFBD;
+}
+
+#four{
+    background-color: chocolate;
+}
+
+#five{
+    background-color: darkslategray;
+}
+
