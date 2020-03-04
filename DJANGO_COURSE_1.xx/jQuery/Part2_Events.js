@@ -33,12 +33,12 @@ $('input').eq(0).keypress(function() {
 })
 
 // We can use this event object, that has a ton of information!
-//Open console, "which:(...)" is a unique identifier 
+//Returns an event object with identifiers
 $('input').eq(0).keypress(function(event) {
   console.log(event);
 })
 
-// Each Keyboard Key has a Keycode, for example Enter is 13
+// Each Keyboard Key has a Keycode, for example Enter is 13, "which" is the identifier for the keycode
 $('input').eq(0).keypress(function(event) {
   if(event.which === 13){
     $('h3').toggleClass("turnRed");
