@@ -99,9 +99,9 @@ NaN == NaN; // false
 // Here are a quick 5 exercise questions for you!
 // Mentally evaluate the following expressions, then use the console to check!
 
+
 var x = 1
 var y = 2
-
 // Exercise 1
 "2" == y && x === 1;
 

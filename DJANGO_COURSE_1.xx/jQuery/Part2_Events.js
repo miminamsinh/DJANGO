@@ -26,11 +26,14 @@ $('h3').click(function() {
 // KEYPRESS ////
 ///////////////
 // Using This with jQuery
+
+//grab all input tags, index to get the first one and then toggle the header when a key is pressed
 $('input').eq(0).keypress(function() {
   $('h3').toggleClass("turnRed");
 })
 
 // We can use this event object, that has a ton of information!
+//Open console, "which:(...)" is a unique identifier 
 $('input').eq(0).keypress(function(event) {
   console.log(event);
 })

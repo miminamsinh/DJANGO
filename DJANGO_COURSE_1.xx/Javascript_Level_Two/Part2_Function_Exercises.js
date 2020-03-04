@@ -24,9 +24,17 @@
 // sleepIn(false, true) → true
 
 function sleepIn(weekday, vacation) {
-    //Code Goes Here
-}
 
+    if ((weekday == false) && (vacation == false)){
+        return true;
+    }
+    else if ((weekday == true) && (vacation == false)) {
+        return false;
+    }
+    else if ((weekday == false) && (vacation == true)){
+        return true;
+    }
+}
 
 //
 // PROBLEM 2: MONKEY TROUBLE
@@ -42,7 +50,14 @@ function sleepIn(weekday, vacation) {
 // monkeyTrouble(true, false) → false
 
 function monkeyTrouble(aSmile, bSmile) {
-    //Code Goes Here
+
+    // return (aSmile && bSmile) || (!aSmile && !bSmile)
+    if ((aSmile && bSmile) || (!aSmile && !bSmile)){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 
@@ -60,6 +75,12 @@ function monkeyTrouble(aSmile, bSmile) {
 
 function stringTimes(str, n) {
     //Code Goes Here
+    var returnString = "";
+    for (var i = 0; i <n; i++){
+       returnString = returnString + str;
+    }
+
+    return returnString
 }
 
 // PROBLEM 4: LUCKY SUM
@@ -78,7 +99,16 @@ function stringTimes(str, n) {
 
 function luckySum(a, b, c){
 
-  //Code Goes Here
+  if (a == 13){
+      return 0;
+  }
+  if (b == 13){
+      return a;
+  }
+  if (c == 13){
+      return (a+b);
+  }
+  return (a+b+c);
 }
 
 // PROBLEM 5:
@@ -96,7 +126,16 @@ function luckySum(a, b, c){
 // caught_speeding(65, true) → 0
 
 function caught_speeding(speed, is_birthday){
-  //Code Goes Here
+  if (is_birthday){
+      speed = speed -5
+  }
+  if (speed <= 60){
+      return 0;
+  }
+  if (60 < speed <= 80){
+      return 1;
+  }
+  return 2;
 }
 
 
@@ -107,12 +146,12 @@ function caught_speeding(speed, is_birthday){
 // is possible to make the goal by choosing from the given bricks. This is a
 // little harder than it looks and can be done without any loops in a single line!
 //
-// If you can't figue this one out, don't worry, that's why its a bonus!
+// If you can't figure this one out, don't worry, that's why its a bonus!
 //
 // makeBricks(3, 1, 8) → true
 // makeBricks(3, 1, 9) → false
 // makeBricks(3, 2, 10) → true
 
 function makeBricks(small, big, goal){
-  //Code Goes Here
+  return goal%5 >= 0 && goal%5 - small <= 0 && small + 5*big >= goal;
 }
